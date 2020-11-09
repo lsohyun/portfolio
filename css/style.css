@@ -1,0 +1,384 @@
+/*Mobile first*/
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@400;700&display=swap');
+
+html {
+    /*    1rem = 16px*/
+    font-size: 16px;
+}
+
+body {
+    background-color: white;
+    /*    font-family*/
+    font-family: 'roboto', 'sans-serif';
+    font-weight: 300;
+    font-size: 1rem;
+    /*    line-height is 150% of the font size*/
+    line-height: 1.6;
+    color: dimgrey;
+    margin: auto;
+}
+
+
+
+p {
+    font-size: 1rem;
+    margin-bottom: 1.3rem;
+}
+
+/*this is a group selection, selecting all the headlines h1-h4 and set a standard style*/
+h1,
+h2,
+h3 {
+    color: black;
+    /*    font-family*/
+    font-family: 'righteous', 'cursive';
+    /*    font-weight*/
+    margin: 2.75rem 0 1.05rem;
+    line-height: 1.2;
+}
+
+/*Set a unique style to a specific tag element*/
+h1 {
+    /*  top:0 right:0  bottom:0.5rem left:0*/
+    margin-top: 0;
+    font-size: 2.625rem;
+}
+
+h2 {
+    /*  top:1.414rem right:0  bottom:0.5rem left:0*/
+    font-size: 2.369rem;
+}
+
+h3 {
+
+    font-size: 1.777rem;
+}
+
+h4 {
+
+    font-size: 1rem;
+    font-family: 'roboto', 'sans-serif';
+    margin: 1rem 0 2rem;
+    line-height: 1;
+
+}
+
+
+/*Interactive elements*/
+
+/* link*/
+
+a {
+    color: deepskyblue;
+}
+
+a:hover {
+    color: #B2B1AE;
+    /*    text-decoration: none;*/
+}
+
+/*button style*/
+/*solid button style*/
+.btn-primary {
+    font-size: 1rem;
+    letter-spacing: .1rem;
+    line-height: 1.5;
+    /*    border-radius*/
+    /*    top:1 right:2 bottom:1 left:2*/
+    /*    the size of button*/
+    padding: 12px 32px;
+    background-color: deepskyblue;
+    color: white;
+    border: none;
+    margin-top: 10px;
+    transition: all 0.5s;
+
+}
+
+.btn-primary:hover {
+    color: white;
+    background-color: deepskyblue;
+    opacity: 0.8;
+}
+
+/*outline button style*/
+.btn-outline-primary {
+    font-size: 1rem;
+    letter-spacing: .1rem;
+    line-height: 1.375rem;
+    /*    border-radius*/
+    padding: 12px 36px;
+    color: deepskyblue;
+    background-color: transparent;
+    border: 2px deepskyblue solid;
+    transition: all 0.5s;
+}
+
+.btn-outline-primary:hover {
+    color: white;
+    background-color: deepskyblue;
+    border-color: deepskyblue;
+}
+
+/*class name starts with a dot*/
+.view {
+    /*    background*/
+    /*    background-size*/
+    /*    5rem for top and bottom, 0 for left and right padding*/
+    background: #fff url(../img/background2.jpg) center center no-repeat;
+    background-size: cover;
+    padding: 10rem 0;
+}
+
+.view h1 {
+    font-size: 3rem;
+}
+
+.view p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+#homepage {
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+}
+
+#about {
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#gallery {
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#contact {
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.col-sm-4 {
+    padding-bottom: 2rem;}
+
+/*.img {
+    width: auto;
+    height: auto;}
+.img:hover{
+        filter: drop-shadow(4px grey);
+        transform: scale(1);
+        transition: all 0.5s;}
+
+/*home page*/
+
+
+
+/*about page*/
+/*#about .view {
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+}*/
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    align-content: center;
+    justify-content: center;
+}
+
+.gallery-card {
+    width: 200px;
+    height: 200px;
+    background-color: #000;  
+    margin: 15px;
+    perspective: 200px;
+}
+
+.gallery-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform:  0.5s;
+    transform-style: preserve-3d;
+}
+
+.gallery-card:focus .card-inner {
+    transform: rotateY(180deg);
+}
+
+.gallery-card:hover .card-inner {
+    filter: opacity(0.5)
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    background-color: black;
+    color: #fff;
+}
+
+.card-back {
+    background-color: black;
+    color: #fff;
+    transform: rotateY(180deg);
+    vertical-align: middle;
+    line-height: normal
+}
+
+.card-back h2, .card-back p {
+    padding-top: 40px;
+}
+
+.gallery-card img {
+    width: 200px;
+    height: auto;
+    background-color: #2a2a2a;
+}
+
+@media screen and (max-width: 480px) { 
+    .container {
+        grid-template-columns: auto;
+    }
+}
+
+
+/*screen that is larger than the mobile view, Large Screen*/
+@media only screen and (min-width:480px) {
+    .view {
+        background: #fff url(../img/background2.jpg) center center no-repeat;
+        background-size: cover;
+        padding-bottom: 10rem;
+    }
+
+    h2 {
+        margin-bottom: 3rem;
+    }
+
+
+    #about .view {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+}
+
+
+.navbackground {
+    background-color: white;
+}
+
+
+
+/*navigation button in the mobile view*/
+.navbar-light .navbar-toggler {
+    color: rgba(0, 0, 0, .5);
+    /*    disable the button border*/
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+/*-----navigation brand name------*/
+.navbar-light .navbar-brand {
+    font-family: 'righteous', 'cursive';
+    color: lightskyblue;
+    padding-top: 0;
+}
+
+/*navigation brand name hover color*/
+.navbar-light .navbar-brand:hover {
+    color: deepskyblue;
+}
+
+/*-------navigation menu links--------*/
+.navbar-light .navbar-nav .nav-link {
+    font-family: 'righteous', 'cursive';
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, .5);
+}
+
+/*navigation menu links hover color*/
+.navbar-light .navbar-nav .nav-link:hover {
+    color: deepskyblue;
+}
+
+.navbar-light .navbar-brand:focus,
+.navbar-light .navbar-nav .nav-link:focus {
+    color: rgba(0, 0, 0, .5);
+}
+
+
+
+/* The active link, when scroll to the section, the menu items will automatically turn to a different color */
+
+.navbar-light a.active {
+    color: deepskyblue !important;
+    border-bottom: 2px solid deepskyblue;
+    /*    background-color: #55555a !important;*/
+}
+
+#portfolio {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#contact {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.contact-form {
+    margin: 15px;
+    padding: 15px 80px;
+}
+
+#contact-header {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #2a2a2a;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #2a2a2a;
+    border-radius: 2px;
+    box-sizing: border-box;
+    resize: none;
+    outline: none;
+}
+
+button {
+    padding: 10px 40px;
+    outline: none;
+    color: #000;
+}
+
+
+}
