@@ -23,6 +23,7 @@ body {
 p {
     font-size: 1rem;
     margin-bottom: 1.3rem;
+    line-height: 1.5;
 }
 
 /*this is a group selection, selecting all the headlines h1-h4 and set a standard style*/
@@ -40,8 +41,9 @@ h3 {
 /*Set a unique style to a specific tag element*/
 h1 {
     /*  top:0 right:0  bottom:0.5rem left:0*/
-    margin-top: 0;
-    font-size: 2.625rem;
+
+    font-size: 2em;
+    text-align: center;
 }
 
 h2 {
@@ -64,6 +66,7 @@ h4 {
 }
 
 
+
 /*Interactive elements*/
 
 /* link*/
@@ -76,6 +79,7 @@ a:hover {
     color: #B2B1AE;
     /*    text-decoration: none;*/
 }
+
 
 /*button style*/
 /*solid button style*/
@@ -140,33 +144,34 @@ a:hover {
 }
 
 #homepage {
-    padding-top: 5rem;
+    padding-top: auto;
     padding-bottom: 4rem;
 }
 
 #about {
-    padding-top: 5rem;
+    padding-top: auto;
     padding-bottom: 4rem;
     padding-left: 20px;
     padding-right: 20px;
 }
 
 #gallery {
-    padding-top: 5rem;
+    padding-top: auto;
     padding-bottom: 4rem;
     padding-left: 20px;
     padding-right: 20px;
 }
 
 #contact {
-    padding-top: 5rem;
+    padding-top: auto;
     padding-bottom: 4rem;
     padding-left: 20px;
     padding-right: 20px;
 }
 
 .col-sm-4 {
-    padding-bottom: 2rem;}
+    padding-top: 1rem;
+    padding-bottom: 1rem;}
 
 /*.img {
     width: auto;
@@ -273,6 +278,39 @@ a:hover {
         padding-top: 5rem;
         padding-bottom: 5rem;
     }
+
+    }
+
+}
+
+
+
+@media screen and (max-width: 550px) { 
+   /* Navbar */
+   header{
+    /*Your code here again.*/  
+    flex-direction: row;
+    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+  }
+
+  .nav-links{
+    /*Your code here again.*/  
+    flex-direction: row;
+    justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    -ms-flex-pack: justify;
+    align-items: center;
+  }
+
+  .nav-item a{
+    padding: 10px;
+    }
 }
 
 
@@ -280,53 +318,65 @@ a:hover {
     background-color: white;
 }
 
+header{
+    background: #fff;
+    border-bottom: 3px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
+    
+  }
 
-/*navigation button in the mobile view*/
-.navbar-light .navbar-toggler {
-    color: rgba(0, 0, 0, .5);
-    /*    disable the button border*/
-    border-color: rgba(0, 0, 0, 0.1);
+  header > nav {
+    padding: 0px 20px ;
+    background-color:white;
 }
 
-/*-----navigation brand name------*/
-.navbar-light .navbar-brand {
+nav {
+    display: flex;
+}
+
+nav a {
+    width: 100px;
+}
+
+.nav-item {
+    font-size: 20px;
     font-family: 'righteous', 'cursive';
-    color: lightskyblue;
-    padding-top: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: grey;
 }
 
-/*navigation brand name hover color*/
-.navbar-light .navbar-brand:hover {
+.nav-item a {
+    color: grey;
+}
+
+.nav-item a:hover, a:focus {
+    color: deepskyblue;
+    text-decoration: underline;
+
+}
+
+.nav-item b {
+    color: deepskyblue;
+    text-decoration: underline;
+
+}
+
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: flex-end;
     color: deepskyblue;
 }
 
-/*-------navigation menu links--------*/
-.navbar-light .navbar-nav .nav-link {
-    font-family: 'righteous', 'cursive';
-    font-size: 1.2rem;
-    color: rgba(0, 0, 0, .5);
-}
 
-/*navigation menu links hover color*/
-.navbar-light .navbar-nav .nav-link:hover {
-    color: deepskyblue;
-}
-
-.navbar-light .navbar-brand:focus,
-.navbar-light .navbar-nav .nav-link:focus {
-    color: rgba(0, 0, 0, .5);
-}
-
-
-
-/* The active link, when scroll to the section, the menu items will automatically turn to a different color */
-
-.navbar-light a.active {
-    color: deepskyblue !important;
-    border-bottom: 2px solid deepskyblue;
-    /*    background-color: #55555a !important;*/
-}
 
 #portfolio {
     padding-top: 30px;
@@ -382,3 +432,48 @@ button {
 
 
 }
+
+.index-header {
+    height: 200px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#index-big {
+    font-size: 2.5rem;
+    margin: 15px;
+}
+
+#index-small {
+    margin: 15px;
+    flex-basis: 10px;
+    text-emphasis: normal;
+}
+
+
+a:link {
+    text-decoration: none;
+}
+
+a.skip{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+  }
+  
+  a.skip:focus{
+    top:20px;
+    color: black;
+    text-decoration-style: solid;
+  }
+
+  *:focus{
+    border: 2px solid white;
+  }
