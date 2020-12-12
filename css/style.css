@@ -414,7 +414,11 @@ nav .logo a:hover, a:focus{
     font-weight: 700;
     padding-bottom: 20px;
     padding-top: 20px;
+    font-family: 'pacifico', cursive;
+    color: #3c0762;
 }
+
+
 
 
 
@@ -446,8 +450,11 @@ button {
     color: #000;
 }
 
-
+.label {
+	margin-top: 0;
+	padding-top: 0;
 }
+
 
 .index-header {
     height: 200px;
@@ -507,4 +514,9 @@ footer{
     text-align: center;
   }
 
-  
+.cont{
+    display: grid;
+	width: 100%;
+	height: auto;
+	justify-content: center;
+}

@@ -40,26 +40,40 @@
 
 
 <main id="skip" class="content">
+    <div><h1>Contact Me</h1></div>
+    <div class="contact">
+    <p>Thank you for exploring my website!</p>
+    <p>If you have any question or inquiry, please feel free to contact me :)</p>
     <fieldset>
     <form class="contact-form"
     action="https://formspree.io/f/xayljroe"
-    method="POST"
-  >
+    method="POST" >
   <legend id="contact-header">Get in Touch!</legend>
-    <label for="name_id">Your Name:</label>
-    <input type="text" name="name" id="name_id" placeholder="Enter Your Name" required>
-    <label for="email_id">Your Email:</label>
-    <input type="text" name="email" id="email" placeholder="Enter Your Email" required>
-    <label for="phone_id">Your Phone Number:</label>
-    <input type="text" name="phone" id="name_id" placeholder="Enter Your Phone Number" required>
-    <label for="msg">Leave A Message:</label>
-    <textarea id="message" placeholder="Enter Your Message"></textarea>
+  <label class="label">
+    Your Name:
+    <input type="text" name="name" placeholder="Name">
+</label>
+<label class="label">
+    Your Email:
+    <input type="text" name="_replyto" placeholder="Enter Your Email">
+</label>
+<label class="label">
+    Your Phone Number:
+    <input type="text" name="subject" placeholder="Enter Your Phone Number">
+</label>
+<label class="label">
+    Your message:
+    <textarea name="message" placeholder="Enter Your Message"></textarea>
+</label>
+<button type="submit">Send</button>
   
+
     <!-- your other form fields go here -->
   
-    <button type="submit">Send</button>
+
     </fieldset>
 </form>
+</div>
 
 </body>
 </main>
