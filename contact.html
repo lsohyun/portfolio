@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!-- google analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160635420-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-160635420-1');
+        </script>
         <title>Sohyun Lim</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
@@ -13,15 +22,7 @@
         <script src="https://kit.fontawesome.com/5c9f2dfb26.js"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
         <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
-        <!-- google analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160635420-1"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
 
-        gtag('config', 'UA-160635420-1');
-        </script>
     </head>
 
 <body id="homepage">
@@ -40,39 +41,38 @@
 
 
 <main id="skip" class="content">
-    <div><h1>Contact Me</h1></div>
+    <div><h1>Contact Me</h1></div><br/>
     <div class="contact">
-    <p>Thank you for exploring my website!</p>
+    <p>Thank you for exploring my website!</p><br/>
     <p>If you have any question or inquiry, please feel free to contact me :)</p>
     <fieldset>
     <form class="contact-form"
     action="https://formspree.io/f/xayljroe"
     method="POST" >
-  <legend id="contact-header">Get in Touch!</legend>
-  <label class="label">
-    Your Name:
-    <input type="text" name="name" placeholder="Name">
-</label>
-<label class="label">
-    Your Email:
-    <input type="text" name="_replyto" placeholder="Enter Your Email">
-</label>
-<label class="label">
-    Your Phone Number:
-    <input type="text" name="subject" placeholder="Enter Your Phone Number">
-</label>
-<label class="label">
-    Your message:
-    <textarea name="message" placeholder="Enter Your Message"></textarea>
-</label>
-<button type="submit">Send</button>
+    <fieldset>
+        <legend id="contact-header">Let's get in touch!</legend>
+        <label>
+            Your Name:
+            <br/><input type="text" id="name" placeholder="Please type your name">
+        </label>
+        <br/><br/>
+        <label>
+            Your Email:
+            <br/><input type="text" id="email" placeholder="Please type your email">
+        </label>
+        <br/><br/>
+        <label>
+            Your Message:
+            <br/><textarea id="message" placeholder="Please type your message :)"></textarea>
+        </label>
+        <br/><br/>
+    </fieldset>
+    <button type="submit">send</button>
+    </form>
   
 
     <!-- your other form fields go here -->
   
-
-    </fieldset>
-</form>
 </div>
 
 </body>

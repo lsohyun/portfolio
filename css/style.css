@@ -407,6 +407,7 @@ nav .logo a:hover, a:focus{
 .contact-form {
     margin: 15px;
     padding: 15px 80px;
+    font-family: 'zilla slab', 'sans-serif';
 }
 
 #contact-header {
@@ -415,10 +416,7 @@ nav .logo a:hover, a:focus{
     padding-bottom: 20px;
     padding-top: 20px;
     font-family: 'pacifico', cursive;
-    color: #3c0762;
 }
-
-
 
 
 
@@ -430,6 +428,7 @@ input[type=text] {
     border: 1px solid #2a2a2a;
     border-radius: 2px;
     box-sizing: border-box;
+    font-family: 'zilla slab', 'sans-serif';
 }
 
 textarea {
@@ -442,19 +441,18 @@ textarea {
     box-sizing: border-box;
     resize: none;
     outline: none;
+    font-family: 'zilla slab', 'sans-serif';
 }
 
 button {
     padding: 10px 40px;
     outline: none;
     color: #000;
+    
 }
 
-.label {
-	margin-top: 0;
-	padding-top: 0;
-}
 
+}
 
 .index-header {
     height: 200px;
@@ -514,9 +512,10 @@ footer{
     text-align: center;
   }
 
-.cont{
+.contact{
     display: grid;
 	width: 100%;
 	height: auto;
-	justify-content: center;
+    justify-content: center;
+    text-align: center;
 }
