@@ -187,22 +187,22 @@ a:hover {
 }
 
 
-.resume-heading {
+.about-heading {
     font-size: 1.5rem;
     color: #3c0762;
     padding: 10px 120px;  
 }
-.resume-card {
+.about-card {
     padding: 15px 120px;
     margin-bottom: 10px;
 }
 
-.resume-role {
+.about-role {
     font-weight: 700;
     text-align: left;
 }
 
-.daterange {
+.date {
     text-align: right;
 }
 
@@ -309,9 +309,15 @@ a:hover {
     .container{
         grid-template-columns: auto;
     }
-    .view p{
+    .view{
         text-align: left;
+        align-items: flex-start;
     }
+    .index-header{
+        align-items: flex-start;
+        padding-left: 0;
+    }
+
 }
 
 
@@ -467,11 +473,6 @@ button {
     margin: 15px;
 }
 
-#index-small {
-    margin: 15px;
-    flex-basis: 10px;
-    text-emphasis: normal;
-}
 
 
 a:link {
@@ -496,7 +497,7 @@ a.skip{
   }
 
   *:focus{
-    border: 2px solid white;
+    border: 2px solid black;
   }
 
 .content {
@@ -518,4 +519,5 @@ footer{
 	height: auto;
     justify-content: center;
     text-align: center;
+    background-color: rgba(162, 129, 186, 0.75);
 }
